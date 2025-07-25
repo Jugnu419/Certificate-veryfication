@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificate Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #cert-img {
+      max-width: 90%;
+      margin-top: 20px;
+      border: 2px solid #ccc;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Certificate Verification - SAMOSA001</h2>
+  <button onclick="showCert('course')">Course Certificate</button>
+  <button onclick="showCert('fdp')">FDP Certificate</button>
 
+  <div>
+    <img id="cert-img" src="" alt="Certificate">
+  </div>
+
+  <script>
+    function showCert(type) {
+      var img = document.getElementById('cert-img');
+      if (type === 'course') {
+        img.src = '../certificates/NPTEL001_course.jpg';
+      } else {
+        img.src = '../certificates/NPTEL001_fdp.jpg';
+      }
+      img.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
